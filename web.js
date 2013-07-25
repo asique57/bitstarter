@@ -9,10 +9,10 @@ var fileData = null;
 	fileData = data;
 });
 return fileData;
-}
+};
 app.get('/', function(request, response) {
   //response.send('Hello World2!');
-    resonnse.send(readFile('index.html'));
+    response.send(readFile('index.html'));
 });
 
 var port = process.env.PORT || 5000;
