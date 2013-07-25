@@ -3,16 +3,12 @@ var app = express();
 var fs = require('fs');
 app.use(express.logger());
 var readFile = function(filename) {
-var fileData = null;
-    fs.readFileSync('index.html',function(err,data) {
-	if(err) console.log(err);
-	fileData = data;
-});
-return fileData;
+    return fs.readFileSync(filename);
 };
 app.get('/', function(request, response) {
   //response.send('Hello World2!');
-    response.send(readFile('index.html'));
+    var buf = readFile('index.html');
+    response.send(readFile(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
