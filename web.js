@@ -8,7 +8,7 @@ var readFile = function(filename) {
 app.get('/', function(request, response) {
   response.send('Hello World2!');
   var buf = readFile('readme.txt');
-  response.send(readFile(buf.toString());
+  response.send( buf.toString());
 });
 
 var port = process.env.PORT || 5000;
