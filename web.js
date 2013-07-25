@@ -6,9 +6,9 @@ var readFile = function(filename) {
     return fs.readFileSync(filename);
 };
 app.get('/', function(request, response) {
-  //response.send('Hello World2!');
-    var buf = readFile('index.html');
-    response.send(readFile(buf.toString());
+  response.send('Hello World2!');
+  //  var buf = readFile('index.html');
+  //  response.send(readFile(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
