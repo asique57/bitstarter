@@ -7,7 +7,7 @@ var readFile = function(filename) {
 };
 app.get('/', function(request, response) {
   response.send('Hello World2!');
-  var buf = readFile('index.html');
+  var buf = readFile('readme.txt');
   response.send(readFile(buf.toString());
 });
 
