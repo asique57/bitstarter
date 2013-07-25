@@ -7,8 +7,8 @@ var readFile = function(filename) {
 };
 app.get('/', function(request, response) {
   response.send('Hello World2!');
-  //  var buf = readFile('index.html');
-  //  response.send(readFile(buf.toString());
+  var buf = readFile('index.html');
+  response.send(readFile(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
